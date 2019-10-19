@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from questiona.views import PollListView
-from questiona.views.poll_view import PollDetailView
+from questiona.views import PollListView, PollDetailView, PollCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PollListView.as_view(), name='poll'),
     path('poll/<int:pk>/', PollDetailView.as_view(), name='poll_detail'),
+    path('poll/create/', PollCreateView.as_view(), name='poll_create'),
 ]
