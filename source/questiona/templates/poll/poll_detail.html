@@ -10,8 +10,8 @@
         </li>
             {% for poll in poll.poll_choce.all %}
                 <p class="list-group-item">Answer: {{ poll}}</p>
-
         {% endfor %}
+    <a class="btn btn-primary" href="{% url 'choice_create' %}">Create answer</a>
 
     </ul>
     </div>
