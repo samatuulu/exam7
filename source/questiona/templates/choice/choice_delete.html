@@ -9,7 +9,7 @@
     <form method="POST" action="{% url 'choice_delete' choice.pk %}" class="text-center">
         {% csrf_token %}
         <p><input class="btn btn-danger" type="submit" value="Confirm"></p>
-        <p><a class="btn btn-success" href="{% url 'choice' %}">Cancel</a></p>
+        <p><a class="btn btn-success" href="{% url 'poll' %}">Cancel</a></p>
     </form>
     </div>
 {% endblock %}

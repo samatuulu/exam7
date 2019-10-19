@@ -1,8 +1,9 @@
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
 from questiona.forms import ChoiceForm
-from questiona.models import Choice
+from questiona.models import Choice, Poll
 
 
 class ChoiceListView(ListView):
@@ -18,10 +19,12 @@ class ChoiceListView(ListView):
 class ChoiceCreateView(CreateView):
     template_name = 'choice/choice_create.html'
     form_class = ChoiceForm
-    model = Choice
 
-    def get_success_url(self):
-        return reverse('poll')
+    def form_valid(self, form):
+        poll_pk = self.kwargs.get('pk')
+        poll = get_object_or_404(Poll, pk=poll_pk)
+        poll.poll_choce.create(**form.cleaned_data)
+        return redirect('poll_detail', pk=poll_pk)
 
 
 class ChoiceUpdateView(UpdateView):

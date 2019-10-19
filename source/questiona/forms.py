@@ -12,4 +12,4 @@ class PollForm(forms.ModelForm):
 class ChoiceForm(forms.ModelForm):
     class Meta:
         model = Choice
-        exclude = ['created_at']
+        fields = ['answer']

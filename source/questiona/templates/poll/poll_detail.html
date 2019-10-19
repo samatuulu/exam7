@@ -16,7 +16,7 @@
                 </li>
                 <br>
         {% endfor %}
-    <a class="btn btn-primary" href="{% url 'choice_create' %}">Create answer</a>
+    <a class="btn btn-primary" href="{% url 'choice_create' poll.pk %}" methods="POST" id="add_answer">Create answer</a>
 
     </ul>
     </div>
