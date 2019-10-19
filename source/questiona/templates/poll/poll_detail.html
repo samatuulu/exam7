@@ -4,10 +4,10 @@
     <br>
     <div class="container">
     <ul class="list-group">
-        <li class="list-group-item active">{{ poll }}</li>
+        <li class="list-group-item active">{{ poll }}
+        <a class="btn btn-primary" href="{% url 'poll_update' poll.pk %}">Update Poll</a></li>
             {% for poll in poll.poll_choce.all %}
-
-            <p class="list-group-item">Answer: {{ poll}}</p>
+                <p class="list-group-item">Answer: {{ poll}}</p>
 
         {% endfor %}
 

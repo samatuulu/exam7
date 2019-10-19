@@ -1,5 +1,5 @@
 from django.urls import reverse
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
 from questiona.forms import PollForm
 from questiona.models import Poll
@@ -31,3 +31,13 @@ class PollCreateView(CreateView):
 
     def get_success_url(self):
         return reverse('poll')
+
+
+class PollUpdateView(UpdateView):
+    model = Poll
+    template_name = 'poll/poll_update.html'
+    context_object_name = 'poll'
+    form_class = PollForm
+
+    def get_success_url(self):
+        return reverse('poll_detail', kwargs={'pk': self.object.pk})
