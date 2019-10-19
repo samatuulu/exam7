@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from questiona.views import PollListView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', PollListView.as_view(), name='poll'),
 ]
