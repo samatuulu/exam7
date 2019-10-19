@@ -1,5 +1,5 @@
-from django.urls import reverse
-from django.views.generic import ListView, CreateView, UpdateView
+from django.urls import reverse, reverse_lazy
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
 from questiona.forms import ChoiceForm
 from questiona.models import Choice
@@ -32,3 +32,10 @@ class ChoiceUpdateView(UpdateView):
 
     def get_success_url(self):
         return reverse('choice')
+
+
+class ChoiceDeleteView(DeleteView):
+    model = Choice
+    template_name = 'choice/choice_delete.html'
+    context_object_name = 'choice'
+    success_url = reverse_lazy('choice')

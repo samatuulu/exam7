@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete answer{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+    <h1>Are you sure want to delete {{ choice }}?</h1>
+    <form method="POST" action="{% url 'choice_delete' choice.pk %}" class="text-center">
+        {% csrf_token %}
+        <p><input class="btn btn-danger" type="submit" value="Confirm"></p>
+        <p><a class="btn btn-success" href="{% url 'choice' %}">Cancel</a></p>
+    </form>
+    </div>
+{% endblock %}

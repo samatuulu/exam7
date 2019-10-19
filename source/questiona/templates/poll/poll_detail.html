@@ -12,6 +12,7 @@
                 <p class="list-group-item">Answer: {{ poll}}</p>
                 <li>
                 <a class="btn btn-primary" href="{% url 'choice_update' poll.pk %}">Update answer</a>
+                <a class="btn btn-primary" href="{% url 'choice_delete' poll.pk %}">Delete answer</a>
                 </li>
                 <br>
         {% endfor %}
