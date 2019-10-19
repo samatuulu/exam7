@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Choices{% endblock %}
+
+{% block content %}
+    <br/>
+    <hr>
+{% for ch in choice %}
+    <div class="container">
+        {{ ch }}
+    </div>
+{% endfor %}
+    <hr>
+{% endblock %}
+
+
+
+
