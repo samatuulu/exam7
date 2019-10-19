@@ -10,7 +10,7 @@
 {% for pol in poll %}
     <div class="container">
     <ul class="list-group">
-        <a class="list-group-item" href="#">{{ pol }}</a>
+        <a class="list-group-item" href="{% url 'poll_detail' pol.pk %}">{{ pol }}</a>
     </ul>
     </div>
 {% endfor %}

@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from questiona.views import PollListView
+from questiona.views.poll_view import PollDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PollListView.as_view(), name='poll'),
+    path('poll/<int:pk>/', PollDetailView.as_view(), name='poll_detail'),
 ]
