@@ -1,0 +1,100 @@
+[
+{
+  "model": "questiona.poll",
+  "pk": 1,
+  "fields": {
+    "question": "How are you doing?",
+    "created_at": "2019-10-19T06:54:06.879Z"
+  }
+},
+{
+  "model": "questiona.poll",
+  "pk": 2,
+  "fields": {
+    "question": "How to run project?",
+    "created_at": "2019-10-19T06:59:27.789Z"
+  }
+},
+{
+  "model": "questiona.poll",
+  "pk": 3,
+  "fields": {
+    "question": "When python 2 dies?",
+    "created_at": "2019-10-19T06:59:39.627Z"
+  }
+},
+{
+  "model": "questiona.poll",
+  "pk": 4,
+  "fields": {
+    "question": "What is index out of range in python?",
+    "created_at": "2019-10-19T07:00:06.971Z"
+  }
+},
+{
+  "model": "questiona.poll",
+  "pk": 5,
+  "fields": {
+    "question": "How to create dump data?",
+    "created_at": "2019-10-19T07:00:49.632Z"
+  }
+},
+{
+  "model": "questiona.choice",
+  "pk": 1,
+  "fields": {
+    "answer": "Needs some commands to run the project. For example: ./manage.py runserver.",
+    "poll": 2
+  }
+},
+{
+  "model": "questiona.choice",
+  "pk": 2,
+  "fields": {
+    "answer": "There are many ways to run the project. Show me the code.",
+    "poll": 2
+  }
+},
+{
+  "model": "questiona.choice",
+  "pk": 3,
+  "fields": {
+    "answer": "January 1, 2020.",
+    "poll": 3
+  }
+},
+{
+  "model": "questiona.choice",
+  "pk": 4,
+  "fields": {
+    "answer": "Due to size is not fixed, the available index is greater than the assigned index for a list(available index > assigned index). If you try to access the empty or None element by pointing available index of list, Then you will get the List index out of range error.",
+    "poll": 4
+  }
+},
+{
+  "model": "questiona.choice",
+  "pk": 5,
+  "fields": {
+    "answer": "In python list is mutable, so the size is not fixed.\r\nDue to size is not fixed, the available index is greater than the assigned index for a list(available index > assigned index).\r\nIf you try to access the empty or None element by pointing available index of list, Then you will get the List index out of range error.",
+    "poll": 4
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$IqkuvnczNS84$qwEItfSXvEAJNLOsDcgWgTtphUXgPuGmjeOE3N0MAFY=",
+    "last_login": "2019-10-19T06:53:28.332Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-10-19T06:50:13.725Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
