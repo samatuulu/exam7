@@ -15,3 +15,14 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.answer
+
+
+class Answer(models.Model):
+    poll = models.ForeignKey('questiona.Poll', related_name='answer_poll', on_delete=models.CASCADE,
+                                 verbose_name='Poll')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Created at')
+    choice = models.ForeignKey('questiona.Choice', related_name='answer_choice', on_delete=models.CASCADE,
+                                   verbose_name='Choice')
+
+    def str(self):
+        return self.poll
